@@ -9,6 +9,11 @@ function Calculator({ workouts, allowSound }) {
 
   const [duration, setDuration] = useState(0);
 
+  //  For change of Title
+  useEffect(() => {
+    document.title = `Your ${number}-exercise `;
+  }, [number]);
+
   // For change of duration
   useEffect(
     function () {
